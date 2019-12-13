@@ -32,9 +32,9 @@ shinyUI(navbarPage("Ratemaking Tool",
     sidebarPanel(
       selectizeInput("var", "Variable Selection", choices = c(Source = "SourceOfBusinessCode", Zip = "ZipCode",
                                                               Program = "RatingProgramCode",
-                                                              Tenure = "TenureYears",MarketingType = "MarketingTypeCode",
+                                                              MarketingType = "MarketingTypeCode",
                                                               Membership="MembershipDiscountTypeCode",InsuranceScore = "InsuranceScoreTypeCode",
-                                                              MultiProduct="MultiProductCode",PayType="PaymentTypeCode",
+                                                             PayType="PaymentTypeCode",
                                                               Channel = "ChannelCode",
                                                               PriorCarrier="PriorCarrierCode",ClaimsFree = "ClaimsFreeInd"))
 

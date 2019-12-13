@@ -64,9 +64,9 @@ output$varPlot <- renderPlot({
               Severity = sum(Severity), Frequency = sum(Frequecy))
                    
   #create plot
-ggplot(data=varData, aes(x=AY, y= Severity, group=)) + 
-                     geom_line(aes( color=input$var)) +
-                     geom_point(aes(shape=input$var, color=input$var)) +
+ggplot(data=varData, aes(x=AY, y= Severity, group=get(input$var))) + 
+                     geom_line(aes( color=get(input$var))) +
+                     geom_point(aes(shape=get(input$var), color=get(input$var))) +
                      coord_cartesian(xlim = ranges$x, ylim = ranges$y, expand=FALSE) +
                      theme(legend.position = "bottom")
                      })
